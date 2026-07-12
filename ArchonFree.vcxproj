@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{2e4210e1-6450-42c5-8ce2-e916df2af12b}</ProjectGuid>
+    <RootNamespace>ArchonCheat</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <SourcePath>$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <LinkIncremental>true</LinkIncremental>
+      <AdditionalDependencies>VMProtectSDK64.lib;libSDK.Debug.x64.lib;libMinHook.x64.lib;d3d12.lib;dxgi.lib;dxguid.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Archon\Utils\Obf;$(SolutionDir)Archon\Utils\Minhook;$(SolutionDir)Archon\SDK;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <StructMemberAlignment>Default</StructMemberAlignment>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <AdditionalDependencies>VMProtectSDK64.lib;libSDK.Release.x64.lib;libMinHook.x64.lib;d3d12.lib;dxgi.lib;dxguid.lib;user32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Archon\Utils\Obf;$(SolutionDir)Archon\Utils\Minhook;$(SolutionDir)Archon\SDK;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+   
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Archon\Archon.cpp" />
+    <ClCompile Include="Archon\Core\Instance\Instances.cpp" />
+    <ClCompile Include="Archon\Core\Managers\ConfigManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\DynamicIslandManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\FontManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\ModuleManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\NotificationManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\RotationManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\SoundManager.cpp" />
+    <ClCompile Include="Archon\Core\Managers\WorldManager.cpp" />
+    <ClCompile Include="Archon\Core\Memory.cpp" />
+    <ClCompile Include="Archon\Hook\DX12Hook.cpp" />
+    <ClCompile Include="Archon\Hook\FunctionHook.cpp" />
+    <ClCompile Include="Archon\Hook\GameRenderHook.cpp" />
+    <ClCompile Include="Archon\Hook\Hooks.cpp" />
+    <ClCompile Include="Archon\imgui\imgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_demo.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_draw.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_impl_dx12.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_impl_win32.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_tables.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\imgui\imgui_widgets.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\main.cpp" />
+    <ClCompile Include="Archon\modules\impl\AntiCrash.cpp" />
+    <ClCompile Include="Archon\modules\impl\ArrayList.cpp" />
+    <ClCompile Include="Archon\modules\impl\AutoConnect.cpp" />
+    <ClCompile Include="Archon\modules\impl\BHop.cpp" />
+    <ClCompile Include="Archon\modules\impl\BugGod.cpp" />
+    <ClCompile Include="Archon\modules\impl\CameraManager.cpp" />
+    <ClCompile Include="Archon\modules\impl\ChatSystem.cpp" />
+    <ClCompile Include="Archon\modules\impl\ClickGUI.cpp" />
+    <ClCompile Include="Archon\modules\impl\ESP.cpp" />
+    <ClCompile Include="Archon\modules\impl\FastUse.cpp" />
+    <ClCompile Include="Archon\modules\impl\Flight.cpp" />
+    <ClCompile Include="Archon\modules\impl\FreeCam.cpp" />
+    <ClCompile Include="Archon\modules\impl\ItemCleaner.cpp" />
+    <ClCompile Include="Archon\modules\impl\ItemSpawner.cpp" />
+    <ClCompile Include="Archon\modules\impl\KillAura.cpp" />
+    <ClCompile Include="Archon\modules\impl\LongJump.cpp" />
+    <ClCompile Include="Archon\modules\impl\NameChanger.cpp" />
+    <ClCompile Include="Archon\modules\impl\NameTags.cpp" />
+    <ClCompile Include="Archon\modules\impl\FullBright.cpp" />
+    <ClCompile Include="Archon\modules\impl\NoRender.cpp" />
+    <ClCompile Include="Archon\modules\impl\PlayerManager.cpp" />
+    <ClCompile Include="Archon\modules\impl\Reach.cpp" />
+    <ClCompile Include="Archon\modules\impl\ServerLagger.cpp" />
+    <ClCompile Include="Archon\modules\impl\SkinBlinker.cpp" />
+    <ClCompile Include="Archon\modules\impl\SoundFX.cpp" />
+    <ClCompile Include="Archon\modules\impl\Spam.cpp" />
+    <ClCompile Include="Archon\modules\impl\SpawnTest.cpp" />
+    <ClCompile Include="Archon\modules\impl\Speed.cpp" />
+    <ClCompile Include="Archon\modules\impl\Test.cpp" />
+    <ClCompile Include="Archon\modules\impl\Timer.cpp" />
+    <ClCompile Include="Archon\modules\settings\Settings.cpp" />
+    <ClCompile Include="Archon\pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Archon\Utils\InputUtils.cpp" />
+    <ClCompile Include="Archon\Utils\MiniAudio\miniaudio.cpp" />
+    <ClCompile Include="Archon\Utils\Player\RotationUtil.cpp" />
+    <ClCompile Include="Archon\Utils\Render\stb_image_impl.cpp" />
+    <ClCompile Include="Archon\Utils\World\ActorUtil.cpp" />
+    <ClCompile Include="Archon\Utils\World\EventInterval.cpp" />
+    <ClCompile Include="Archon\Utils\World\Events.cpp" />
+    <ClCompile Include="Archon\Utils\World\FTickCallbackSystem.cpp" />
+    <ClCompile Include="Archon\Utils\World\WorldUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Archon\Archon.h" />
+    <ClInclude Include="Archon\Core\Config.h" />
+    <ClInclude Include="Archon\Core\Instance\Instances.hpp" />
+    <ClInclude Include="Archon\Core\Managers\ConfigManager.h" />
+    <ClInclude Include="Archon\Core\Managers\DynamicIslandManager.h" />
+    <ClInclude Include="Archon\Core\Managers\FontManager.h" />
+    <ClInclude Include="Archon\Core\Managers\ModuleManager.h" />
+    <ClInclude Include="Archon\Core\Managers\NotificationManager.h" />
+    <ClInclude Include="Archon\Core\Managers\RotationManager.h" />
+    <ClInclude Include="Archon\Core\Managers\SoundManager.h" />
+    <ClInclude Include="Archon\Core\Managers\WorldManager.h" />
+    <ClInclude Include="Archon\Core\Memory.h" />
+    <ClInclude Include="Archon\Hook\DX12Hook.h" />
+    <ClInclude Include="Archon\Hook\FunctionHook.h" />
+    <ClInclude Include="Archon\Hook\GameRenderHook.h" />
+    <ClInclude Include="Archon\Hook\Hooks.h" />
+    <ClInclude Include="Archon\imgui\imconfig.h" />
+    <ClInclude Include="Archon\imgui\imgui.h" />
+    <ClInclude Include="Archon\imgui\imgui_impl_dx12.h" />
+    <ClInclude Include="Archon\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="Archon\imgui\imgui_internal.h" />
+    <ClInclude Include="Archon\imgui\imstb_rectpack.h" />
+    <ClInclude Include="Archon\imgui\imstb_textedit.h" />
+    <ClInclude Include="Archon\imgui\imstb_truetype.h" />
+    <ClInclude Include="Archon\modules\impl\AntiCrash.h" />
+    <ClInclude Include="Archon\modules\impl\ArrayList.h" />
+    <ClInclude Include="Archon\modules\impl\AutoConnect.h" />
+    <ClInclude Include="Archon\modules\impl\BHop.h" />
+    <ClInclude Include="Archon\modules\impl\BugGod.h" />
+    <ClInclude Include="Archon\modules\impl\CameraManager.h" />
+    <ClInclude Include="Archon\modules\impl\ChatSystem.h" />
+    <ClInclude Include="Archon\modules\impl\ClickGUI.h" />
+    <ClInclude Include="Archon\modules\impl\DynamicIsland.h" />
+    <ClInclude Include="Archon\modules\impl\ESP.h" />
+    <ClInclude Include="Archon\modules\impl\FastUse.h" />
+    <ClInclude Include="Archon\modules\impl\Flight.h" />
+    <ClInclude Include="Archon\modules\impl\FreeCam.h" />
+    <ClInclude Include="Archon\modules\impl\ItemCleaner.h" />
+    <ClInclude Include="Archon\modules\impl\ItemSpawner.h" />
+    <ClInclude Include="Archon\modules\impl\KillAura.h" />
+    <ClInclude Include="Archon\modules\impl\LongJump.h" />
+    <ClInclude Include="Archon\modules\impl\NameChanger.h" />
+    <ClInclude Include="Archon\modules\impl\NameTags.h" />
+    <ClInclude Include="Archon\modules\impl\AntiAim.h" />
+    <ClInclude Include="Archon\modules\impl\FullBright.h" />
+    <ClInclude Include="Archon\modules\impl\NoRender.h" />
+    <ClInclude Include="Archon\modules\impl\PlayerManager.h" />
+    <ClInclude Include="Archon\modules\impl\Reach.h" />
+    <ClInclude Include="Archon\modules\impl\ServerLagger.h" />
+    <ClInclude Include="Archon\modules\impl\SkinBlinker.h" />
+    <ClInclude Include="Archon\modules\impl\SoundFX.h" />
+    <ClInclude Include="Archon\modules\impl\Spam.h" />
+    <ClInclude Include="Archon\modules\impl\SpawnTest.h" />
+    <ClInclude Include="Archon\modules\impl\Speed.h" />
+    <ClInclude Include="Archon\modules\impl\Test.h" />
+    <ClInclude Include="Archon\modules\impl\Timer.h" />
+    <ClInclude Include="Archon\modules\impl\UnLoad.h" />
+    <ClInclude Include="Archon\modules\Module.h" />
+    <ClInclude Include="Archon\modules\ModuleRenderer.h" />
+    <ClInclude Include="Archon\modules\settings\Settings.h" />
+    <ClInclude Include="Archon\pch.h" />
+    <ClInclude Include="Archon\UI\ArchonGUI.h" />
+    <ClInclude Include="Archon\UI\MCChatSystem.h" />
+    <ClInclude Include="Archon\Utils\AntiCheat\AntiDebug.hpp" />
+    <ClInclude Include="Archon\Utils\AntiCheat\vmaware.hpp" />
+    <ClInclude Include="Archon\Utils\ClientData.h" />
+    <ClInclude Include="Archon\Utils\InputUtils.h" />
+    <ClInclude Include="Archon\Utils\Logger.h" />
+    <ClInclude Include="Archon\Utils\Minhook\MinHook.h" />
+    <ClInclude Include="Archon\Utils\MiniAudio\miniaudio.h" />
+    <ClInclude Include="Archon\Utils\Nlohmann\json.hpp" />
+    <ClInclude Include="Archon\Utils\Nlohmann\json_fwd.hpp" />
+    <ClInclude Include="Archon\Utils\Obf\VMProtectSDK.h" />
+    <ClInclude Include="Archon\Utils\Obf\xorstr.hpp" />
+    <ClInclude Include="Archon\Utils\Player\RotationUtil.h" />
+    <ClInclude Include="Archon\Utils\RawData\rawData_icons_font_2.h" />
+    <ClInclude Include="Archon\Utils\Render\AnimateUtil.h" />
+    <ClInclude Include="Archon\Utils\Render\Animation.h" />
+    <ClInclude Include="Archon\Utils\Render\d3dx12.h" />
+    <ClInclude Include="Archon\Utils\Render\DX12DrawContext.h" />
+    <ClInclude Include="Archon\Utils\Render\Render2DUtil.h" />
+    <ClInclude Include="Archon\Utils\Render\Render3DUtil.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader2DUtil.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\DX12Shader.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\BlurProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\GlowProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\MeshProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\RoundedRectProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\ShadowBlurProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\Shader\impr\StencilRectProgram.h" />
+    <ClInclude Include="Archon\Utils\Render\stb_image.h" />
+    <ClInclude Include="Archon\Utils\Render\TextureUtil.h" />
+    <ClInclude Include="Archon\Utils\Utils.h" />
+    <ClInclude Include="Archon\Utils\World\ActorUtil.h" />
+    <ClInclude Include="Archon\Utils\World\EventInterval.h" />
+    <ClInclude Include="Archon\Utils\World\Events.h" />
+    <ClInclude Include="Archon\Utils\World\FTickCallbackSystem.h" />
+    <ClInclude Include="Archon\Utils\World\ScopedTimer.hpp" />
+    <ClInclude Include="Archon\Utils\World\TimerHandler.h" />
+    <ClInclude Include="Archon\Utils\World\WorldUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Archon\Utils\Minhook\libMinHook.x64.lib" />
+    <Content Include="Archon\Utils\Obf\VMProtectSDK64.lib" />
+    <Content Include="Archon\Utils\Render\Shader\impr\BlurProgram.h.bak" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
